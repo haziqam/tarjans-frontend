@@ -1,4 +1,4 @@
-![DFSedges](https://github.com/haziqam/tarjans-frontend/assets/103514359/46b35dac-edcf-40d3-95a6-5879b7ff69ce)## Deskripsi
+## Deskripsi
 
 Projek ini merupakan aplikasi berbasis web fullstack yang dapat menerima input graf dan menemukan Strongly Connected Component (SCC) serta Bridges pada graf tersebut. Input graf, SCC, serta Bridge tersebut akan divisualisasikan pada aplikasi web pada projek ini.
 
@@ -32,6 +32,7 @@ Pada penelusuran graf dengan DFS, terdapat beberapa jenis sisi.
 - Cross edge: sisi U-V, di mana U bukan ansestor maupun desendan (keturunan) dari V pada pohon DFS
 
   Perhatikan gambar berikut.
+  
   ![DFSedges](https://github.com/haziqam/tarjans-frontend/assets/103514359/654f9902-1572-4369-9138-e567838af8e3)
 
 
