@@ -1,10 +1,12 @@
 "use client";
+import { Dispatch, SetStateAction, useRef, useState } from "react";
 import { Panel } from "primereact/panel";
 import { InputTextarea } from "primereact/inputtextarea";
 import { Button } from "primereact/button";
 import { Toast } from "primereact/toast";
-import { Dispatch, SetStateAction, useRef, useState } from "react";
 import { showError, showSuccess } from "./toastFunctions";
+import { panelPt } from "./panelStyle";
+import styles from "./components.module.css";
 
 export function GraphForm(props: {
   onSave: Dispatch<SetStateAction<string[][] | undefined>>;
@@ -26,23 +28,32 @@ export function GraphForm(props: {
   };
 
   return (
-    <Panel header="Insert Graph Data">
+    <Panel header="Insert Graph Data" pt={panelPt}>
       <Toast ref={toastRef} position="bottom-right" />
       <form>
         <InputTextarea
+          pt={{
+            root: {
+              className: styles.inputTextArea,
+            },
+          }}
           id="description"
           value={graphInput}
           onChange={(e) => setGraphInput(e.target.value)}
-          rows={5}
-          cols={30}
+          rows={10}
+          cols={36}
         />
-        <Button
-          label="Save"
-          onClick={(e) => {
-            e.preventDefault();
-            handleSave();
-          }}
-        />
+        <div
+          style={{ display: "flex", justifyContent: "end", marginTop: "16px" }}
+        >
+          <Button
+            label="Save"
+            onClick={(e) => {
+              e.preventDefault();
+              handleSave();
+            }}
+          />
+        </div>
       </form>
     </Panel>
   );

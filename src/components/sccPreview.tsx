@@ -5,6 +5,7 @@ import vis from "vis-network";
 import { colorArray } from "./colors";
 import { visData } from "@/types/visData";
 import { getGraphVisData } from "./graphPreview";
+import { panelPt } from "./panelStyle";
 
 export function SccPreview(props: {
   graphData: string[][] | undefined;
@@ -27,7 +28,7 @@ export function SccPreview(props: {
   }, [props.sccData]);
 
   return (
-    <Panel header="SCC Preview">
+    <Panel header="SCC Preview" pt={panelPt}>
       <div ref={graphImgRef} className={styles.graphImg}></div>
     </Panel>
   );

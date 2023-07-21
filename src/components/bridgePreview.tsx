@@ -1,9 +1,10 @@
-import { Panel } from "primereact/panel";
-import { useEffect, useRef } from "react";
-import styles from "./components.module.css";
 import vis from "vis-network";
+import { useEffect, useRef } from "react";
+import { Panel } from "primereact/panel";
 import { visData } from "@/types/visData";
 import { getGraphVisData } from "./graphPreview";
+import { panelPt } from "./panelStyle";
+import styles from "./components.module.css";
 
 export function BridgePreview(props: {
   graphData: string[][] | undefined;
@@ -39,7 +40,7 @@ export function BridgePreview(props: {
   }, [props.bridgeData]);
 
   return (
-    <Panel header="Bridge Preview">
+    <Panel header="Bridge Preview" pt={panelPt}>
       <div ref={graphImgRef} className={styles.graphImg}></div>
     </Panel>
   );

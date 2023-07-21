@@ -46,24 +46,42 @@ export function Generator(props: {
   };
 
   return (
-    <Card>
+    <Card
+      pt={{
+        root: {
+          style: {
+            width: "100%",
+            boxShadow: " 0 0 4px 2px #00000033",
+            borderRadius: "6px",
+          },
+        },
+        content: {
+          style: {
+            paddingTop: "0",
+            paddingBottom: "0",
+          },
+        },
+      }}
+    >
       <Toast ref={toastRef} position="bottom-right" />
-      <Button
-        label="Generate SCC"
-        disabled={isFetching || !props.graphData}
-        onClick={async (e) => {
-          e.preventDefault();
-          handleSccSolve();
-        }}
-      />
-      <Button
-        label="Generate Bridges"
-        disabled={isFetching || !props.graphData}
-        onClick={async (e) => {
-          e.preventDefault();
-          handleBridgeSolve();
-        }}
-      />
+      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+        <Button
+          label="Generate SCC"
+          disabled={isFetching || !props.graphData}
+          onClick={async (e) => {
+            e.preventDefault();
+            handleSccSolve();
+          }}
+        />
+        <Button
+          label="Generate Bridges"
+          disabled={isFetching || !props.graphData}
+          onClick={async (e) => {
+            e.preventDefault();
+            handleBridgeSolve();
+          }}
+        />
+      </div>
     </Card>
   );
 }
