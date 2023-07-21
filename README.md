@@ -31,9 +31,13 @@ Pada penelusuran graf dengan DFS, terdapat beberapa jenis sisi.
 - Back edge: sisi U-V, di mana V adalah ansestor U tapi V bukan parent dari U pada pohon DFS. Adanya back edge mengindikasikan terdapat siklus (cycle) pada graf
 - Cross edge: sisi U-V, di mana U bukan ansestor maupun desendan (keturunan) dari V pada pohon DFS
   Perhatikan gambar berikut.
-  <img src=''>
+  <img src='https://drive.google.com/file/d/1fjgo3bJczewA-BXSOJkzeoqiAvH9xsWQ/view?usp=sharing'>
 
 ## Cara penggunaan aplikasi
+
+<img src='https://drive.google.com/file/d/12H9jYaOeJP8VZpDBxcCj__VS58tVf8zx/view?usp=sharing'>
+<img src='https://drive.google.com/file/d/1siWwgII_64WtROapltKX6Ux_28fK96PN/view?usp=sharing'>
+<img src='https://drive.google.com/file/d/1q7PUOkyKKV6bikmZMhWzoBqHQDgTY7TU/view?usp=sharing'>
 
 1. Jalankan aplikasi secara lokal
 2. Masukkan data graf pada form graf. Berikut adalah contoh yang valid
