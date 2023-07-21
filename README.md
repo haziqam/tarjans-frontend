@@ -1,4 +1,4 @@
-## Deskripsi
+![DFSedges](https://github.com/haziqam/tarjans-frontend/assets/103514359/46b35dac-edcf-40d3-95a6-5879b7ff69ce)## Deskripsi
 
 Projek ini merupakan aplikasi berbasis web fullstack yang dapat menerima input graf dan menemukan Strongly Connected Component (SCC) serta Bridges pada graf tersebut. Input graf, SCC, serta Bridge tersebut akan divisualisasikan pada aplikasi web pada projek ini.
 
@@ -31,13 +31,13 @@ Pada penelusuran graf dengan DFS, terdapat beberapa jenis sisi.
 - Back edge: sisi U-V, di mana V adalah ansestor U tapi V bukan parent dari U pada pohon DFS. Adanya back edge mengindikasikan terdapat siklus (cycle) pada graf
 - Cross edge: sisi U-V, di mana U bukan ansestor maupun desendan (keturunan) dari V pada pohon DFS
   Perhatikan gambar berikut.
-  <img src='https://drive.google.com/file/d/1fjgo3bJczewA-BXSOJkzeoqiAvH9xsWQ/view?usp=sharing'>
+  ![DFSedges](https://github.com/haziqam/tarjans-frontend/assets/103514359/654f9902-1572-4369-9138-e567838af8e3)
+
 
 ## Cara penggunaan aplikasi
-
-<img src='https://drive.google.com/file/d/12H9jYaOeJP8VZpDBxcCj__VS58tVf8zx/view?usp=sharing'>
-<img src='https://drive.google.com/file/d/1siWwgII_64WtROapltKX6Ux_28fK96PN/view?usp=sharing'>
-<img src='https://drive.google.com/file/d/1q7PUOkyKKV6bikmZMhWzoBqHQDgTY7TU/view?usp=sharing'>
+<img width="960" alt="demo1" src="https://github.com/haziqam/tarjans-frontend/assets/103514359/b36a5bba-303d-4b1c-a234-07c840490154">
+<img width="960" alt="demo2" src="https://github.com/haziqam/tarjans-frontend/assets/103514359/429ea328-08cb-4ae2-9410-20791bc15e58">
+<img width="960" alt="demo3" src="https://github.com/haziqam/tarjans-frontend/assets/103514359/069229b5-a2c9-4662-81f3-cb4365576a40">
 
 1. Jalankan aplikasi secara lokal
 2. Masukkan data graf pada form graf. Berikut adalah contoh yang valid
