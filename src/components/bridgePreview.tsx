@@ -40,7 +40,10 @@ export function BridgePreview(props: {
   }, [props.bridgeData]);
 
   return (
-    <Panel header="Bridge Preview" pt={panelPt}>
+    <Panel
+      header="Bridge Preview (bridges will be shown as dashed edges)"
+      pt={panelPt}
+    >
       <div ref={graphImgRef} className={styles.graphImg}></div>
     </Panel>
   );

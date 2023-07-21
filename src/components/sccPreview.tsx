@@ -28,7 +28,10 @@ export function SccPreview(props: {
   }, [props.sccData]);
 
   return (
-    <Panel header="SCC Preview" pt={panelPt}>
+    <Panel
+      header="SCC Preview (Nodes of the same SCC will have the same color)"
+      pt={panelPt}
+    >
       <div ref={graphImgRef} className={styles.graphImg}></div>
     </Panel>
   );
