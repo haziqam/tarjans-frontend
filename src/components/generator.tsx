@@ -2,7 +2,6 @@ import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 import { Card } from "primereact/card";
 import { Button } from "primereact/button";
 import { Toast } from "primereact/toast";
-import "primeicons/primeicons.css";
 import { showError, showSuccess, showInfo } from "./toastFunctions";
 
 export function Generator(props: {
@@ -49,11 +48,6 @@ export function Generator(props: {
   return (
     <Card>
       <Toast ref={toastRef} position="bottom-right" />
-      {isFetching && (
-        <i className="pi pi-spin pi-spinner" style={{ fontSize: "2rem" }}>
-          aaa
-        </i>
-      )}
       <Button
         label="Generate SCC"
         disabled={isFetching || !props.graphData}
@@ -101,7 +95,11 @@ async function solveProblem(
   }
 
   onResultChange(response.result);
-  showSuccess(toastRef, `${problemType} found successfully`);
+  console.log(response);
+  showSuccess(
+    toastRef,
+    `${problemType} found successfully in ${response.timeNanoseconds} nanoseconds`
+  );
   setIsSolved(true);
   console.log(response.result);
 }
@@ -109,7 +107,12 @@ async function solveProblem(
 async function fetchResult(
   graphData: string[][],
   toFind: "SCC" | "Bridge"
-): Promise<{ success: boolean; result?: string[][]; errorMsg?: string }> {
+): Promise<{
+  success: boolean;
+  result?: string[][];
+  timeNanoseconds?: number;
+  errorMsg?: string;
+}> {
   try {
     const url = "http://localhost:5000/find" + toFind;
     const response = await fetch(url, {
@@ -121,8 +124,12 @@ async function fetchResult(
     });
 
     if (response.ok) {
-      const result = await response.json();
-      return { success: true, result: result };
+      const responseJSON = await response.json();
+      return {
+        success: true,
+        result: responseJSON.result,
+        timeNanoseconds: responseJSON.timeNanoseconds,
+      };
     } else {
       const errorMsg = await response.text();
       return { success: false, errorMsg: errorMsg };
