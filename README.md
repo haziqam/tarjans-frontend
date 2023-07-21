@@ -30,6 +30,7 @@ Pada penelusuran graf dengan DFS, terdapat beberapa jenis sisi.
 - Forward edge: sisi U-V, di mana U adalah ansestor dari V tapi U bukan parent dari V pada pohon DFS
 - Back edge: sisi U-V, di mana V adalah ansestor U tapi V bukan parent dari U pada pohon DFS. Adanya back edge mengindikasikan terdapat siklus (cycle) pada graf
 - Cross edge: sisi U-V, di mana U bukan ansestor maupun desendan (keturunan) dari V pada pohon DFS
+
   Perhatikan gambar berikut.
   ![DFSedges](https://github.com/haziqam/tarjans-frontend/assets/103514359/654f9902-1572-4369-9138-e567838af8e3)
 
